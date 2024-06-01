@@ -14,6 +14,7 @@ const MainNavigation = () => {
   const deleteIdToken = () => {
     authCtx.logout();
     history.replace('/auth');
+    localStorage.removeItem('idToken');
   };
 
   const isLoggedIn = authCtx.isLoggedIn;
